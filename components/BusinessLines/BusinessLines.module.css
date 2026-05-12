@@ -1,0 +1,162 @@
+.businessLines {
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.mainTitleArea {
+  text-align: center;
+  padding: 100px 5% 60px;
+}
+
+.topLabel {
+  display: inline-block;
+  color: var(--primary-teal);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+}
+
+.mainTitle {
+  font-size: 3.5rem;
+  font-family: var(--font-baloo);
+  color: var(--text-main);
+}
+
+.highlight {
+  color: var(--primary-orange);
+}
+
+.rows {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  min-height: 80vh;
+  width: 100%;
+  align-items: center;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.imageSide {
+  flex: 1;
+  height: 80vh;
+  position: relative;
+  display: block;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.productImage {
+  object-fit: contain;
+  padding: 40px;
+}
+
+.contentSide {
+  flex: 1;
+  padding: 10% 8%;
+  display: flex;
+  align-items: center;
+}
+
+.contentWrapper {
+  max-width: 550px;
+}
+
+.lineTag {
+  display: inline-block;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.lineTitle {
+  font-size: 4rem;
+  font-family: var(--font-baloo);
+  margin-bottom: 25px;
+  line-height: 1.1;
+}
+
+.lineDescription {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  margin-bottom: 45px;
+  opacity: 0.9;
+}
+
+.ctaButton {
+  background: white;
+  color: var(--text-main);
+  padding: 18px 45px;
+  border-radius: 100px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.dividerWrapper {
+  display: block;
+}
+
+/* MOBILE TRANSFORMATION */
+@media (max-width: 968px) {
+  .row {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: auto !important;
+    height: auto !important;
+  }
+
+  .contentSide {
+    width: 100% !important;
+    padding: 60px 25px 30px !important;
+    text-align: center;
+    order: 1 !important;
+    display: block !important;
+  }
+
+  .imageSide {
+    width: 100% !important;
+    height: 400px !important; /* Altura fixa garantida */
+    min-height: 400px !important;
+    order: 2 !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    position: relative !important;
+    padding-bottom: 50px;
+  }
+
+  .imageContainer {
+    width: 100%;
+    height: 100%;
+    position: relative !important;
+    display: block !important;
+  }
+
+  .productImage {
+    padding: 0 !important;
+    object-fit: contain !important;
+  }
+
+  .dividerWrapper {
+    display: none;
+  }
+}

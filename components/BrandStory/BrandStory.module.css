@@ -1,0 +1,163 @@
+.brandStory {
+  padding: 120px 5%;
+  background-color: #ffbf21;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Elementos decorativos */
+.shape1 {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 250px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.logoImage {
+  width: 100%;
+  max-width: 550px; /* Deixando a logo bem maior */
+  height: auto;
+  filter: drop-shadow(0 30px 60px rgba(0,0,0,0.15));
+}
+
+.yearBadge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  padding: 15px 30px;
+  border-radius: 20px;
+  color: var(--primary-orange);
+  font-family: var(--font-baloo);
+  font-weight: 800;
+  font-size: 1.5rem;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  z-index: 10;
+  /* Removida a rotação (ficou reto) */
+}
+
+.content {
+  color: white;
+  z-index: 2;
+}
+
+.title {
+  font-size: 4.5rem; /* Título bem maior */
+  font-family: var(--font-baloo);
+  margin-bottom: 30px;
+  line-height: 1;
+  font-weight: 900;
+  /* Estático */
+}
+
+.text {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 50px;
+  opacity: 0.95;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.statItem {
+  background: white; /* Fundo branco igual o de 20 anos */
+  padding: 25px 15px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.statItem:hover {
+  transform: translateY(-5px);
+}
+
+.statItem h3 {
+  font-size: 2.2rem;
+  font-family: var(--font-baloo);
+  color: var(--primary-orange); /* Cor de destaque */
+  margin-bottom: 5px;
+}
+
+.statItem p {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800;
+  color: #666;
+}
+
+.button {
+  background: white;
+  color: var(--primary-orange);
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-weight: 800;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 40px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+/* MOBILE TRANSFORMATION */
+@media (max-width: 968px) {
+  .brandStory {
+    padding: 80px 20px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 3.2rem;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .logoImage {
+    max-width: 350px;
+  }
+}

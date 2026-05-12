@@ -1,0 +1,167 @@
+.logistics {
+  padding: 120px 5%;
+  background: linear-gradient(135deg, #fdf8e9 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.label {
+  display: inline-block;
+  color: var(--primary-teal);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-family: var(--font-baloo);
+  color: var(--text-main);
+  margin-bottom: 25px;
+  line-height: 1.1;
+}
+
+.highlight {
+  color: var(--primary-orange);
+}
+
+.text {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.routeBox {
+  background: white;
+  padding: 30px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.hub {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hubIcon {
+  font-size: 2rem;
+}
+
+.hub h4 {
+  font-size: 1.1rem;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.hub p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.arrow {
+  width: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.infoNote {
+  background: rgba(72, 181, 170, 0.05);
+  padding: 25px;
+  border-radius: 20px;
+  border-left: 4px solid var(--primary-teal);
+}
+
+.infoNote p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.infoNote strong {
+  color: var(--primary-teal);
+}
+
+/* VISUAL SECTION */
+.visualWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageCard {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 20px;
+  border-radius: 40px;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease;
+}
+
+.imageCard:hover {
+  transform: translateY(-10px);
+}
+
+.freteImage {
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+  display: block;
+}
+
+/* MOBILE */
+@media (max-width: 968px) {
+  .logistics {
+    padding: 80px 25px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .title {
+    font-size: 2.8rem;
+  }
+
+  .routeBox {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .hub {
+    flex-direction: column;
+  }
+
+  .arrow {
+    transform: rotate(90deg);
+  }
+
+  .visualWrapper {
+    order: -1; /* Imagem no topo no mobile para impacto visual */
+  }
+
+  .imageCard {
+    padding: 10px;
+    border-radius: 30px;
+  }
+}
