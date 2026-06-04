@@ -14,7 +14,7 @@ const inter = Inter({
 
 export const metadata = {
   title: 'Dadaou Baby | Muito amor envolvido',
-  description: 'Qualidade que encante, preço que surpreende',
+  description: 'Qualidade que encanta, preço que surpreende',
 };
 
 import Header from '../components/Header/Header';
