@@ -35,11 +35,11 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className={styles.nav}>
-          <Link href="#home">Início</Link>
-          <Link href="#historia">Sobre Nós</Link>
-          <Link href="#linhas">Linhas de produtos</Link>
-          <Link href="#logistica">Logística</Link>
-          <Link href="#contato" className={styles.cta}>Seja um Revendedor</Link>
+          <a href="#home">Início</a>
+          <a href="#historia">Sobre Nós</a>
+          <a href="#linhas">Linhas de produtos</a>
+          <a href="#logistica">Logística</a>
+          <a href="#contato" className={styles.cta}>Seja um Revendedor</a>
         </nav>
 
         {/* Mobile Toggle */}
@@ -56,11 +56,11 @@ export default function Header() {
       {/* Mobile Menu Overlay */}
       <div className={`${styles.menuOverlay} ${menuOpen ? styles.menuVisible : ''}`}>
         <nav className={styles.mobileNav}>
-          <Link href="#home" onClick={toggleMenu}>Início</Link>
-          <Link href="#historia" onClick={toggleMenu}>Sobre nós</Link>
-          <Link href="#linhas" onClick={toggleMenu}>Linhas de produtos</Link>
-          <Link href="#logistica" onClick={toggleMenu}>Logística</Link>
-          <Link href="#contato" className={styles.mobileMenuCta} onClick={toggleMenu}>Seja um Revendedor</Link>
+          <a href="#home" onClick={toggleMenu}>Início</a>
+          <a href="#historia" onClick={toggleMenu}>Sobre nós</a>
+          <a href="#linhas" onClick={toggleMenu}>Linhas de produtos</a>
+          <a href="#logistica" onClick={toggleMenu}>Logística</a>
+          <a href="#contato" className={styles.mobileMenuCta} onClick={toggleMenu}>Seja um Revendedor</a>
         </nav>
       </div>
     </header>

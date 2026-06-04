@@ -68,7 +68,7 @@ export default function Hero() {
   };
 
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} id="home">
       <div className={styles.container}>
         
         {/* LADO DO CONTEÚDO (Desktop: Esquerda | Mobile: Embaixo) */}

@@ -31,7 +31,7 @@ export default function Footer() {
           <div className={styles.contact}>
             <h4>Contato</h4>
             <p>Belém - PA</p>
-            <a href="mailto:contato@dadoubaby.com.br">contato@dadoubaby.com.br</a>
+            <a href="mailto:contato@dadaoubaby.com.br">contato@dadaoubaby.com.br</a>
             <div className={styles.social}>
               <a href="https://www.instagram.com/dadaoubaby" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>Instagram</a>
               <a href="https://wa.me/5591993057070" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>WhatsApp</a>

@@ -31,6 +31,10 @@ body {
   scroll-behavior: smooth;
 }
 
+[id] {
+  scroll-margin-top: 100px;
+}
+
 h1, h2, h3, h4 {
   font-family: var(--font-baloo);
   font-weight: 700;

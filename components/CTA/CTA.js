@@ -2,7 +2,7 @@ import styles from './CTA.module.css';
 
 export default function CTA() {
   return (
-    <section className={styles.cta}>
+    <section className={styles.cta} id="contato">
       <div className={styles.container}>
         <div className={styles.powerBox}>
           <div className={styles.content}>
