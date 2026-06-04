@@ -13,8 +13,8 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: 'Dadaou Baby | Infantil Premium & Cinematográfico',
-  description: 'Experiência única em produtos infantis premium. 20+ anos de história e confiança.',
+  title: 'Dadaou Baby | Muito amor envolvido',
+  description: 'Qualidade que encante, preço que surpreende',
 };
 
 import Header from '../components/Header/Header';
