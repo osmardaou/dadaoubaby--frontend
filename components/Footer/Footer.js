@@ -43,12 +43,6 @@ export default function Footer() {
           <div className={styles.copyright}>
             <p>&copy; {new Date().getFullYear()} Dadaou Baby. Todos os direitos reservados. Marca Registrada.</p>
           </div>
-          
-          <div className={styles.credits}>
-            Desenvolvido por <a href="http://codebypatrick.dev/" target="_blank" rel="noopener noreferrer" className={styles.devLink}>Patrick.Developer</a>
-          </div>
-
-
         </div>
       </div>
     </footer>

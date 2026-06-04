@@ -90,31 +90,10 @@
   padding-top: 40px;
   border-top: 1px solid #f5f5f5;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   color: #999;
   font-size: 0.85rem;
-}
-
-.credits {
-  font-weight: 500;
-  color: #777;
-}
-
-.devLink {
-  text-decoration: none;
-  font-family: var(--font-baloo);
-  font-weight: 700;
-  color: var(--primary-orange);
-  transition: all 0.3s ease;
-  padding: 2px 8px;
-  background: rgba(255, 135, 66, 0.05);
-  border-radius: 6px;
-}
-
-.devLink:hover {
-  background: var(--primary-orange);
-  color: white;
 }
 
 .legal {
@@ -144,8 +123,6 @@
   }
   
   .bottom {
-    flex-direction: column;
-    gap: 20px;
     text-align: center;
   }
 }
