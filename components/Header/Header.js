@@ -37,7 +37,7 @@ export default function Header() {
         <nav className={styles.nav}>
           <Link href="#home">Início</Link>
           <Link href="#historia">Sobre Nós</Link>
-          <Link href="#linhas">Nossas Linhas</Link>
+          <Link href="#linhas">Linhas de produtos</Link>
           <Link href="#logistica">Logística</Link>
           <Link href="#contato" className={styles.cta}>Seja um Revendedor</Link>
         </nav>

@@ -12,12 +12,13 @@ export default function Hero() {
   const [isDeleting, setIsDeleting] = useState(false);
 
   const phrases = [
-    { line1: "Qualidade que encanta", line2: "preço que ", line3: "surpreende" },
-    { line1: "Muito", line2: "Amor", line3: "envolvido" }
+    { line1: 'Qualidade que encanta,', line2: 'Preço que surpreende', line3: null },
+    { line1: 'Muito', line2: 'Amor', line3: 'envolvido' },
   ];
 
   useEffect(() => {
     const current = phrases[currentPhraseIndex];
+    const hasLine3 = current.line3 != null;
     let timer;
 
     if (!isDeleting) {
@@ -25,13 +26,13 @@ export default function Hero() {
         timer = setTimeout(() => setText1(current.line1.slice(0, text1.length + 1)), 50);
       } else if (text2.length < current.line2.length) {
         timer = setTimeout(() => setText2(current.line2.slice(0, text2.length + 1)), 50);
-      } else if (text3.length < current.line3.length) {
+      } else if (hasLine3 && text3.length < current.line3.length) {
         timer = setTimeout(() => setText3(current.line3.slice(0, text3.length + 1)), 50);
       } else {
         timer = setTimeout(() => setIsDeleting(true), 15000);
       }
     } else {
-      if (text3.length > 0) {
+      if (hasLine3 && text3.length > 0) {
         timer = setTimeout(() => setText3(text3.slice(0, -1)), 30);
       } else if (text2.length > 0) {
         timer = setTimeout(() => setText2(text2.slice(0, -1)), 30);
@@ -47,6 +48,24 @@ export default function Hero() {
   }, [text1, text2, text3, isDeleting, currentPhraseIndex]);
 
   const isSecondPhrase = currentPhraseIndex === 1;
+  const isMainPhrase = currentPhraseIndex === 0;
+
+  const renderLine2 = () => {
+    if (isMainPhrase) {
+      const prefix = 'Preço que ';
+      if (text2.length <= prefix.length) return text2;
+      return (
+        <>
+          {prefix}
+          <span className={styles.highlight}>{text2.slice(prefix.length)}</span>
+        </>
+      );
+    }
+    if (isSecondPhrase) {
+      return <span className={styles.highlight}>{text2}</span>;
+    }
+    return text2;
+  };
 
   return (
     <section className={styles.hero}>
@@ -66,12 +85,12 @@ export default function Hero() {
           </div>
           <h1 className={styles.title}>
             <div className={styles.line}>{text1}</div>
-            <div className={styles.line}>
-              {isSecondPhrase ? <span className={styles.highlight}>{text2}</span> : text2}
-            </div>
-            <div className={styles.line}>
-              {isSecondPhrase ? text3 : <span className={styles.highlight}>{text3}</span>}
-            </div>
+            <div className={styles.line}>{renderLine2()}</div>
+            {!isMainPhrase && (
+              <div className={styles.line}>
+                {isSecondPhrase ? text3 : <span className={styles.highlight}>{text3}</span>}
+              </div>
+            )}
           </h1>
           <p className={styles.subtitle}>
             Do primeiro lookinho aos acessórios essenciais: Tudo o que o seu bebê precisa em um só lugar. Qualidade premium para os pequenos exploradores.
