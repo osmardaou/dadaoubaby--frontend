@@ -1,5 +1,5 @@
 .differentials {
-  padding: 100px 5%;
+  padding: 80px 5% 32px;
   background-color: #ffffff;
   position: relative;
   overflow: hidden;
@@ -89,7 +89,7 @@
 /* MOBILE */
 @media (max-width: 968px) {
   .differentials {
-    padding: 60px 25px;
+    padding: 50px 25px 24px;
   }
 
   .grid {
